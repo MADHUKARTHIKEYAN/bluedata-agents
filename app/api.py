@@ -42,7 +42,7 @@ def root():
 @app.post("/ask")
 def ask(request: AskRequest):
 
-    print(f"User question: {request.question}")
+    print(f"📱 User question: {request.question}")
 
     result = app_graph.invoke(
         {

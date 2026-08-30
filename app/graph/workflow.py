@@ -3,7 +3,8 @@ from langgraph.graph import StateGraph, START, END
 
 from app.tools.marine import get_marine_conditions
 from app.tools.weather import get_weather_forecast
-from app.services.ai import ask_ai
+
+ai import ask_ai
 from app.tools.safety import calculate_safety_risk
 
 from .state import AgentState

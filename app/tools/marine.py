@@ -84,4 +84,4 @@ if __name__ == "__main__":
     print("\n==============================")
     print("LIVE MARINE DATA")
     print("==============================")
-    print(result)
+    print(result)   
