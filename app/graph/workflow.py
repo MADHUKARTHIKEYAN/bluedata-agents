@@ -3,12 +3,10 @@ from langgraph.graph import StateGraph, START, END
 
 from app.tools.marine import get_marine_conditions
 from app.tools.weather import get_weather_forecast
-
-ai import ask_ai
+from app import ask_ai
 from app.tools.safety import calculate_safety_risk
 
 from .state import AgentState
-
 
 # Load environment variables
 load_dotenv()
@@ -46,6 +44,8 @@ temperature, or upcoming weather conditions.
 safety:
 Questions about whether it is safe to go fishing, marine danger,
 warnings, vessel safety, risk levels, or dangerous sea conditions.
+
+Answer only when reliable data is actually available for the requested time. Current data is allowed, and historical data is allowed only when historical data is available. Future requests must be rejected when reliable forecast data does not cover the requested date.
 
 User request:
 {user_input}
